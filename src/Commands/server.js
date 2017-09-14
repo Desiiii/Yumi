@@ -1,3 +1,3 @@
-exports.run = function(ayane, msg) {
-  msg.channel.send("Support Server: // discord.gg link")
+exports.run = (yumi, msg) => {
+  msg.channel.send("Support Server: // discord.gg link");
 };

@@ -1,3 +1,3 @@
-exports.run = function(ayane, msg) {
-msg.channel.send("waddle waddle")
+exports.run = (yumi, msg) => {
+msg.channel.send("waddle waddle");
 };

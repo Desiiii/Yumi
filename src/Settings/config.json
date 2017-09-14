@@ -1,3 +1,6 @@
 {
-  "version": "v3.0.3_5.2"
+  "oliyBots": "TOKEN",
+  "dBots": "TOKEN",
+  "discordToken": "TOKEN",
+  "prefix": "y/"
 }
