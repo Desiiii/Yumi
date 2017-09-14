@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const os = require('os');
-exports.run = (ayane, msg) => {
-seconds = parseInt((ayane.uptime / 1000) % 60),
-minutes = parseInt((ayane.uptime / (1000 * 60)) % 60),
-hours = parseInt((ayane.uptime / (1000 * 60 * 60)) % 24);
-var uptime = "" + hours + " hrs, " + minutes + " mins and " + seconds + " seconds"
+exports.run = (yumi, msg) => {
+seconds = parseInt((yumi.uptime / 1000) % 60),
+minutes = parseInt((yumi.uptime / (1000 * 60)) % 60),
+hours = parseInt((yumi.uptime / (1000 * 60 * 60)) % 24);
+var uptime = "" + hours + " hrs, " + minutes + " mins and " + seconds + " seconds";
   let embed = new Discord.RichEmbed()
     .setTitle("Yumi || Stats")
     .setDescription("Shows the typical stats.")
@@ -15,6 +15,6 @@ var uptime = "" + hours + " hrs, " + minutes + " mins and " + seconds + " second
     .addField("Hoster || OS Version", `AugvstxD || ${os.platform()}`)
     .addField("Discord.js Version", `${Discord.version}`)
     .setTimestamp()
-    .setFooter("Ayane || Made by August")
+    .setFooter("yumi || Made by August")
   msg.channel.send({embed: embed})
 }

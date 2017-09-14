@@ -1,11 +1,11 @@
 var Discord = require('discord.js');
-exports.run = (ayane, msg) => {
+exports.run = (yumi, msg) => {
    const discrim = msg.content.split(' ')[1]
    if (!discrim) return msg.reply("I can't find that discriminator!")
    if (typeof discrim !== 'integer')
    if (discrim.size < 4) return msg.reply("Discriminators are 4 numbers!")
    if (discrim.size > 4) return msg.reply("Discriminators are 4 numbers!")
-	 let members = ayane.users.filter(c=>c.discriminator===discrim).map(c=>c.username).join('\n')
+	 let members = yumi.users.filter(c=>c.discriminator===discrim).map(c=>c.username).join('\n')
 	 if (!members) return msg.reply("No members have that discriminator!")
    let embed = new Discord.RichEmbed()
      .setTitle("Yumi | Discriminator")

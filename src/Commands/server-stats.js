@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-exports.run = (ayane, msg) => {
-        var bot_farms = ayane.guilds.filter(g => ((g.members.filter(u => u.user.bot).size / g.memberCount) * 100) > 0.65 && g.memberCount > 100).size;
-        var tiny_servers = ayane.guilds.filter(g => g.memberCount < 25).size;
-        var small_servers = ayane.guilds.filter(g => g.memberCount < 100 && g.memberCount >= 25).size;
-        var normal_servers = ayane.guilds.filter(g => g.memberCount < 500 && g.memberCount >= 100).size;
-        var large_servers = ayane.guilds.filter(g => g.memberCount < 1000 && g.memberCount >= 500).size;
-        var massive_servers = ayane.guilds.filter(g => g.memberCount < 5000 && g.memberCount >= 1000).size;
+exports.run = (yumi, msg) => {
+        var bot_farms = yumi.guilds.filter(g => ((g.members.filter(u => u.user.bot).size / g.memberCount) * 100) > 0.65 && g.memberCount > 100).size;
+        var tiny_servers = yumi.guilds.filter(g => g.memberCount < 25).size;
+        var small_servers = yumi.guilds.filter(g => g.memberCount < 100 && g.memberCount >= 25).size;
+        var normal_servers = yumi.guilds.filter(g => g.memberCount < 500 && g.memberCount >= 100).size;
+        var large_servers = yumi.guilds.filter(g => g.memberCount < 1000 && g.memberCount >= 500).size;
+        var massive_servers = yumi.guilds.filter(g => g.memberCount < 5000 && g.memberCount >= 1000).size;
 	 let embed = new Discord.RichEmbed()
 	   .setTitle("Yumi | Server Sizes")
 	   .setDescription("nothing")

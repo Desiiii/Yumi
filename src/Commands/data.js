@@ -1,6 +1,6 @@
 const sql = require('sqlite')
 sql.open('./databases/database.sqlite')
-exports.run = (ayane, msg) => {
+exports.run = (yumi, msg) => {
     sql.get(`SELECT * FROM database WHERE guildId ='${msg.guild.id}'`).then(row => {
     if (!row) {
       sql.run('INSERT INTO database (guildId, prefix) VALUES (?, ?)', [msg.guild.id, "y/"]);

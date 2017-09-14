@@ -8,5 +8,5 @@ exports.run = (yumi, msg) => {
 	 .addField("Server Owner:", guild.owner)
 	 .addField("Server Region:", guild.region)
      .addField("Server Roles:", guild.roles.map(r => r.name).join(",  "));
-  msg.channel.send({embed})
+  msg.channel.send({embed});
 };

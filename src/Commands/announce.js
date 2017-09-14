@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = (ayane, msg, args) => {
+exports.run = (yumi, msg, args) => {
    if (!args) {
 	 msg.reply("You need a argument! Canceled command...");  
    };
@@ -9,7 +9,7 @@ exports.run = (ayane, msg, args) => {
 	  .addField("My owner sent an announcement, here it is:", `${args.join(' ')}`)
 	  .setFooter("Thanks for listening to the announcement! | Self destruct in 30 seconds!")
 	if (msg.author.id != "280158289667555328") return msg.reply("You thought I am gonna let you?")
-   ayane.guilds.forEach(r => {
+   yumi.guilds.forEach(r => {
     r.defaultChannel.send({embed : announce}).then(ms => { ms.delete(30000)});
   });
 };

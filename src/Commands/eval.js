@@ -1,5 +1,5 @@
 const settings = require('../../settings.json');
-exports.run = (ayane, msg, args) => {
+exports.run = (yumi, msg, args) => {
 if(!isDeveloper(msg.author.id)) return msg.reply("**You** Don't have permission to execute `Javascript` code.")
   try {
     const code = args.join(" ");
