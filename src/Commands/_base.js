@@ -1,3 +1,3 @@
-exports.run = async(yumi, msg, args) {
+exports.run = async(yumi, msg, args) => {
  // code
 };

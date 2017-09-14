@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(ayane, msg, args) {
+exports.run = (ayane, msg, args) => {
    if (!args) {
 	 msg.reply("You need a argument! Canceled command...");  
    };

@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const sql = require('sqlite');
 sql.open('./src/databases/database.sqlite');
-exports.run = function(ayane, msg, args) {
+exports.run = (ayane, msg, args) => {
   sql.get(`SELECT * FROM guilds WHERE guildID ='${msg.guild.id}'`).then(guild => {
 	 if (!guild) {
 	  sql.run('INSERT INTO guilds (guildID, prefix) VALUES (?, ?)', [msg.guild.id, 'a;'],

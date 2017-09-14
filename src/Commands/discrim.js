@@ -1,5 +1,5 @@
 var Discord = require('discord.js');
-exports.run = function(ayane, msg) {
+exports.run = (ayane, msg) => {
    const discrim = msg.content.split(' ')[1]
    if (!discrim) return msg.reply("I can't find that discriminator!")
    if (typeof discrim !== 'integer')

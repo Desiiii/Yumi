@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(ayane, msg) {
+exports.run = (ayane, msg) => {
         var bot_farms = ayane.guilds.filter(g => ((g.members.filter(u => u.user.bot).size / g.memberCount) * 100) > 0.65 && g.memberCount > 100).size;
         var tiny_servers = ayane.guilds.filter(g => g.memberCount < 25).size;
         var small_servers = ayane.guilds.filter(g => g.memberCount < 100 && g.memberCount >= 25).size;

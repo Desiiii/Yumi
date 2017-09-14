@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const os = require('os');
-exports.run = function(ayane, msg) {
+exports.run = (ayane, msg) => {
 seconds = parseInt((ayane.uptime / 1000) % 60),
 minutes = parseInt((ayane.uptime / (1000 * 60)) % 60),
 hours = parseInt((ayane.uptime / (1000 * 60 * 60)) % 24);

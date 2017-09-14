@@ -1,6 +1,6 @@
 const snekfetch = require('snekfetch');
 const Discord = require('discord.js');
-exports.run = function(yumi, msg, args) {
+exports.run = (yumi, msg, args) => {
   msg.channel.send(':x: | An error occured, API is down.')
   msg.edit(`:cat: MEOW!`).then(mes => {
   snekfetch.get("http://random.cat/meow").then(r => {

@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(client, msg) {
+exports.run = (client, msg) => {
   const embed = new Discord.RichEmbed()
    .setTitle("Hello :wave:, I am Yumi! Made by AugvstxD#1793!")
    .setDescription("I am Yumi, I am a multifunctional discord bot made by [AugvstxD](https://keybase.io/AnAuguseh)!")

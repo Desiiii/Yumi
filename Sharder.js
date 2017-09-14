@@ -1,7 +1,8 @@
-const Dicksword = require('discord.js')
+const Dicksword = require('discord.js');
+const config = require('./src/Settings/config.json');
 
 const shard = new Dicksword.ShardingManager('./Yumi.js', {
-    token: "YOUR TOKEN" // Bitch you ain't stealing my token
+    token: config.discordToken // Bitch you ain't stealing my token
 })
 
 shard.spawn();

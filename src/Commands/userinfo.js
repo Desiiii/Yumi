@@ -1,5 +1,5 @@
 let Discord = require('discord.js');
-exports.run = function(ayane, msg, args) {
+exports.run = (ayane, msg, args) => {
 if (!args) {
 	msg.reply("Please mention a user!");
   }

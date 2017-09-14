@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(client, msg, args) {
+exports.run = (client, msg, args) => {
   let error = new Discord.RichEmbed()
     .setTitle("Yumi | Commands")
     .setDescription("Do `y/cmds [category]` to choose a category!")

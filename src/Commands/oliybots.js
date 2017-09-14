@@ -1,5 +1,5 @@
 const snekfetch = require('snekfetch');
-exports.run = function(ayane, msg) {
+exports.run = (ayane, msg) => {
 msg.channel.send("Trying to post server stats!").then(mes => {
 	  setTimeout(() => {
   snekfetch.post(`https://discordbots.org/api/bots/317145148901556234/stats`)

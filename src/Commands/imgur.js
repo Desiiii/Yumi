@@ -1,9 +1,9 @@
-const imgursearch = require('imgur-search')
-exports.run = function(client, msg, args) {
+const imgursearch = require('imgur-search');
+exports.run = (client, msg, args) => {
 var imgur = new imgursearch("1e027a0bbc59aec")
   if (args.length < 1) return msg.reply("Boi, You didn't put shit.")
   msg.channel.send("Searching...").then(m => {
-imgur.getRandomFromSearch(args.join(" ")).always(function (resp) {
+imgur.getRandomFromSearch(args.join(" ")).always(resp => {
     if(resp.title === undefined){
         return m.edit("**No Image was found**")
     }

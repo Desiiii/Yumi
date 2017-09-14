@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(client, msg, args) {
+exports.run = (client, msg, args) => {
   if (args.length < 1) return msg.reply("Patreon or Paypal?")
 
   if (msg.content.toLowerCase().includes(` paypal`)) {

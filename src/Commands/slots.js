@@ -10,7 +10,7 @@ const slots = [
 ];
 const config = require('../Settings/config.json');
 const snekfetch = require('snekfetch'); //npm install snekfetch (Come with Discord.js <3)
-exports.run = function(yumi, msg) {
+exports.run = (yumi, msg) => {
 	let updoots = snekfetch.get(`https://discordbots.org/api/bots/${yumi.user.id}/votes`)
 		.set(`Authorization`, config.oliyBots)
 		.then(r => {

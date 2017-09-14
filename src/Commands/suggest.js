@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-exports.run = function(yumi, msg, args) {
+exports.run = (yumi, msg, args) => {
   let embed1 = new Discord.RichEmbed()
      .setTitle("Yumi | __Suggestions__")
      .setDescription(":x: | Missing Arguments!\nDo `y/suggestion [suggestion]`!")

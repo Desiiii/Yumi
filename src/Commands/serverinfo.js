@@ -1,5 +1,5 @@
 let Discord = require('discord.js');
-exports.run = function(yumi, msg) {
+exports.run = (yumi, msg) => {
   let guild = msg.guild
    let embed = new Discord.RichEmbed()
      .setTitle(guild.name)

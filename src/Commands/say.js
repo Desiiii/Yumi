@@ -1,4 +1,4 @@
-exports.run = function(yumi, msg, args) {
+exports.run = (yumi, msg, args) => {
    if (!args[0]) { 
      return msg.reply("You didn't add what you want me to say !!!")
    }

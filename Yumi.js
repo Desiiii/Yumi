@@ -1,17 +1,18 @@
 const { Client } = require('discord.js');
 const chalk = require('chalk');
 const config = require('./src/Settings/config.json');
-const PackageJSON = require('./package.json')
+const PackageJSON = require('./package.json');
+const snekfetch = require('snekfetch');
 const client = new Client({
     disabledEvents:['TYPING_START', 'TYPING_STOP']
 });
+
 
 client.on('ready', () => {
   client.user.setGame(`y/help | Version: ${PackageJSON.version} | [${client.guilds.size} / ${client.users.size}]`)
    console.log("Ready to serve " + client.guilds.size + " guilds with " + client.users.size + " users. I am on " + PackageJSON.version + " of Yumi! I really should update my github!")
 });
 
-const snekfetch = require('snekfetch');
 client.on('guildCreate', guild => {
     snekfetch
         .post('https://bots.discord.pw/api/bots/317145148901556234/stats')
